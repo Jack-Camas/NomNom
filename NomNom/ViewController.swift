@@ -15,5 +15,9 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func GoNext(_ sender: Any) {
+        let VC = UIStoryboard(name: "MapView", bundle: nil).instantiateInitialViewController()!
+        self.view.window?.rootViewController = VC
+    }
 }
 

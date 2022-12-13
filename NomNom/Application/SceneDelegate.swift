@@ -18,16 +18,50 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         //guard let _ = (scene as? UIWindowScene) else { return }
         
-        let VC =  UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+       // let VC =  UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+//        let searchNC = UINavigationController(rootViewController: SearchVC())
+//        let bookMarkNC = UINavigationController(rootViewController: BookMarkVC())
+        
+       
+        
                window = UIWindow(frame: windowScene.coordinateSpace.bounds)
                window?.windowScene = windowScene
-                window?.rootViewController = VC
+                window?.rootViewController = createTabBar()
                window?.makeKeyAndVisible()
+    }
+    
+    func createSearchNC() -> UINavigationController {
+        let searchVC = SearchVC()
+        searchVC.title = "Search"
         
+        searchVC.tabBarItem = UITabBarItem.init(title: "Home", image: UIImage(systemName: "house"), tag: 0)
         
-        guard let _ = (scene as? UIWindowScene) else { return }
+        return UINavigationController(rootViewController: searchVC)
+    }
+    
+    func createBookMarkNC() -> UINavigationController {
+        let bookMarkVC = BookMarkVC()
+        bookMarkVC.title = "BookMark"
+        bookMarkVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
+        return UINavigationController(rootViewController: bookMarkVC)
+    }
+    
+    func createMapNC() -> UINavigationController {
+        let mapVC = MapVC()
+        mapVC.title = "Map"
+        mapVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 2)
+        return UINavigationController(rootViewController: mapVC)
+    }
+    
+    func createTabBar() -> UITabBarController {
+        let tabbar = UITabBarController()
+        UITabBar.appearance().backgroundColor = .black
+        UITabBar.appearance().tintColor = .white
+        tabbar.viewControllers = [createSearchNC(), createBookMarkNC(), createMapNC()]
+        return tabbar
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

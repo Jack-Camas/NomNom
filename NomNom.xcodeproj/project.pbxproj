@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		04894599294263B100F0644B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04894598294263B100F0644B /* AppDelegate.swift */; };
 		0489459B294263B100F0644B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489459A294263B100F0644B /* SceneDelegate.swift */; };
-		0489459D294263B100F0644B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489459C294263B100F0644B /* ViewController.swift */; };
-		048945A0294263B100F0644B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0489459E294263B100F0644B /* Main.storyboard */; };
 		048945A2294263B300F0644B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048945A1294263B300F0644B /* Assets.xcassets */; };
 		048945A5294263B300F0644B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048945A3294263B300F0644B /* LaunchScreen.storyboard */; };
+		048945AE2947023600F0644B /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048945AD2947023600F0644B /* SearchVC.swift */; };
+		048945B02947028600F0644B /* BookMarkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048945AF2947028600F0644B /* BookMarkVC.swift */; };
+		048945B4294712F100F0644B /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048945B3294712F100F0644B /* MapVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04894595294263B100F0644B /* NomNom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NomNom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04894598294263B100F0644B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0489459A294263B100F0644B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0489459C294263B100F0644B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0489459F294263B100F0644B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		048945A1294263B300F0644B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		048945A4294263B300F0644B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		048945A6294263B300F0644B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		048945AD2947023600F0644B /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		048945AF2947028600F0644B /* BookMarkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkVC.swift; sourceTree = "<group>"; };
+		048945B3294712F100F0644B /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		04894597294263B100F0644B /* NomNom */ = {
 			isa = PBXGroup;
 			children = (
-				04894598294263B100F0644B /* AppDelegate.swift */,
-				0489459A294263B100F0644B /* SceneDelegate.swift */,
-				0489459C294263B100F0644B /* ViewController.swift */,
-				0489459E294263B100F0644B /* Main.storyboard */,
-				048945A1294263B300F0644B /* Assets.xcassets */,
-				048945A3294263B300F0644B /* LaunchScreen.storyboard */,
-				048945A6294263B300F0644B /* Info.plist */,
+				048945B2294702D500F0644B /* Application */,
+				048945AC2946FD8B00F0644B /* TabBar */,
+				048945B1294702B100F0644B /* Supporting Files */,
 			);
 			path = NomNom;
+			sourceTree = "<group>";
+		};
+		048945AC2946FD8B00F0644B /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				048945AD2947023600F0644B /* SearchVC.swift */,
+				048945AF2947028600F0644B /* BookMarkVC.swift */,
+				048945B3294712F100F0644B /* MapVC.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		048945B1294702B100F0644B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				048945A6294263B300F0644B /* Info.plist */,
+				048945A1294263B300F0644B /* Assets.xcassets */,
+				048945A3294263B300F0644B /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		048945B2294702D500F0644B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				04894598294263B100F0644B /* AppDelegate.swift */,
+				0489459A294263B100F0644B /* SceneDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +154,6 @@
 			files = (
 				048945A5294263B300F0644B /* LaunchScreen.storyboard in Resources */,
 				048945A2294263B300F0644B /* Assets.xcassets in Resources */,
-				048945A0294263B100F0644B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +164,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0489459D294263B100F0644B /* ViewController.swift in Sources */,
+				048945B4294712F100F0644B /* MapVC.swift in Sources */,
+				048945AE2947023600F0644B /* SearchVC.swift in Sources */,
 				04894599294263B100F0644B /* AppDelegate.swift in Sources */,
+				048945B02947028600F0644B /* BookMarkVC.swift in Sources */,
 				0489459B294263B100F0644B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +175,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0489459E294263B100F0644B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0489459F294263B100F0644B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		048945A3294263B300F0644B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -288,12 +308,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NomNom/Info.plist;
+				INFOPLIST_FILE = "NomNom/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,12 +336,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NomNom/Info.plist;
+				INFOPLIST_FILE = "NomNom/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04041685294986B100468109 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04041684294986B100468109 /* MainTabBarController.swift */; };
 		04894599294263B100F0644B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04894598294263B100F0644B /* AppDelegate.swift */; };
 		0489459B294263B100F0644B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489459A294263B100F0644B /* SceneDelegate.swift */; };
 		048945A2294263B300F0644B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048945A1294263B300F0644B /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04041684294986B100468109 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		04894595294263B100F0644B /* NomNom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NomNom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04894598294263B100F0644B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0489459A294263B100F0644B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0404168129480F4C00468109 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				048945AD2947023600F0644B /* SearchVC.swift */,
+				048945AF2947028600F0644B /* BookMarkVC.swift */,
+				048945B3294712F100F0644B /* MapVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		0489458C294263B100F0644B = {
 			isa = PBXGroup;
 			children = (
@@ -68,9 +80,8 @@
 		048945AC2946FD8B00F0644B /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				048945AD2947023600F0644B /* SearchVC.swift */,
-				048945AF2947028600F0644B /* BookMarkVC.swift */,
-				048945B3294712F100F0644B /* MapVC.swift */,
+				04041684294986B100468109 /* MainTabBarController.swift */,
+				0404168129480F4C00468109 /* ViewController */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -166,6 +177,7 @@
 			files = (
 				048945B4294712F100F0644B /* MapVC.swift in Sources */,
 				048945AE2947023600F0644B /* SearchVC.swift in Sources */,
+				04041685294986B100468109 /* MainTabBarController.swift in Sources */,
 				04894599294263B100F0644B /* AppDelegate.swift in Sources */,
 				048945B02947028600F0644B /* BookMarkVC.swift in Sources */,
 				0489459B294263B100F0644B /* SceneDelegate.swift in Sources */,

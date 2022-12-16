@@ -6,15 +6,22 @@
 //
 
 import UIKit
+import MapboxMaps
 
 class MapVC: UIViewController {
 
+    var mapView: MapView!
+    var accessToken: String = "pk.eyJ1IjoiZmNhbWFzZGV2IiwiYSI6ImNsYmZsd2ltMjAwcHQzd3Bndm5rNHhzMXUifQ.Kht_leUC3luF0RPopMNp6Q"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .systemGreen
+        
+        ResourceOptionsManager.default.resourceOptions.accessToken = self.accessToken
+        mapView = MapView(frame: view.bounds)
+        view.addSubview(mapView)
+        
+        
     }
-    
 
     /*
     // MARK: - Navigation

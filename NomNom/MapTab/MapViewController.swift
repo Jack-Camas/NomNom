@@ -6,14 +6,19 @@
 //
 
 import UIKit
+import MapboxMaps
 
 class MapViewController: UIViewController {
     
-    let name:String = ""
-
+    var mapView: MapView!
+    var accessToken: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ResourceOptionsManager.default.resourceOptions.accessToken = self.accessToken
+        mapView = MapView(frame: view.bounds)
+        view.addSubview(mapView)
         
         
     }

@@ -15,6 +15,10 @@
 		048945AE2947023600F0644B /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048945AD2947023600F0644B /* SearchVC.swift */; };
 		048945B02947028600F0644B /* BookMarkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048945AF2947028600F0644B /* BookMarkVC.swift */; };
 		048945B4294712F100F0644B /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048945B3294712F100F0644B /* MapVC.swift */; };
+		1C531C66294BFEC1001DA4D7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C531C65294BFEC1001DA4D7 /* MapViewController.swift */; };
+		1C531C68294BFEDE001DA4D7 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C531C67294BFEDE001DA4D7 /* MapView.storyboard */; };
+		1C531C6A294BFF3E001DA4D7 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C531C69294BFF3E001DA4D7 /* MapManager.swift */; };
+		1C531C6D294BFFA2001DA4D7 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C531C6C294BFFA2001DA4D7 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		048945AD2947023600F0644B /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		048945AF2947028600F0644B /* BookMarkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkVC.swift; sourceTree = "<group>"; };
 		048945B3294712F100F0644B /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		1C531C65294BFEC1001DA4D7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1C531C67294BFEDE001DA4D7 /* MapView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
+		1C531C69294BFF3E001DA4D7 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
+		1C531C6C294BFFA2001DA4D7 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +78,7 @@
 		04894597294263B100F0644B /* NomNom */ = {
 			isa = PBXGroup;
 			children = (
+				1C531C64294BFE7D001DA4D7 /* MapTab */,
 				048945B2294702D500F0644B /* Application */,
 				048945AC2946FD8B00F0644B /* TabBar */,
 				048945B1294702B100F0644B /* Supporting Files */,
@@ -103,6 +112,25 @@
 				0489459A294263B100F0644B /* SceneDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		1C531C64294BFE7D001DA4D7 /* MapTab */ = {
+			isa = PBXGroup;
+			children = (
+				1C531C6B294BFF5A001DA4D7 /* BottomSheet */,
+				1C531C69294BFF3E001DA4D7 /* MapManager.swift */,
+				1C531C65294BFEC1001DA4D7 /* MapViewController.swift */,
+				1C531C67294BFEDE001DA4D7 /* MapView.storyboard */,
+			);
+			path = MapTab;
+			sourceTree = "<group>";
+		};
+		1C531C6B294BFF5A001DA4D7 /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				1C531C6C294BFFA2001DA4D7 /* File.swift */,
+			);
+			path = BottomSheet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +193,7 @@
 			files = (
 				048945A5294263B300F0644B /* LaunchScreen.storyboard in Resources */,
 				048945A2294263B300F0644B /* Assets.xcassets in Resources */,
+				1C531C68294BFEDE001DA4D7 /* MapView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,8 +208,11 @@
 				048945AE2947023600F0644B /* SearchVC.swift in Sources */,
 				04041685294986B100468109 /* MainTabBarController.swift in Sources */,
 				04894599294263B100F0644B /* AppDelegate.swift in Sources */,
+				1C531C6A294BFF3E001DA4D7 /* MapManager.swift in Sources */,
 				048945B02947028600F0644B /* BookMarkVC.swift in Sources */,
 				0489459B294263B100F0644B /* SceneDelegate.swift in Sources */,
+				1C531C6D294BFFA2001DA4D7 /* File.swift in Sources */,
+				1C531C66294BFEC1001DA4D7 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

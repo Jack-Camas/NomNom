@@ -35,7 +35,7 @@ class MainTabBarController: UITabBarController {
     
         func createMapNC() -> UINavigationController {
             let mapVC = MapVC()
-            mapVC.title = "Map"
+           // mapVC.title = "Map"
             mapVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 2)
             return UINavigationController(rootViewController: mapVC)
         }

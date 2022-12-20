@@ -8,6 +8,7 @@
 import UIKit
 import MapboxMaps
 
+
 class MapVC: UIViewController {
 
     var mapView: MapView!
@@ -15,9 +16,7 @@ class MapVC: UIViewController {
     
 
     var myBackgroundLayer = BackgroundLayer(id: "my-background-layer")
-    
-
- 
+    lazy var moodSelectionVC = UIStoryboard(name: "BottomSheet", bundle: nil).instantiateViewController(withIdentifier: "bottomSheet")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,12 +41,6 @@ class MapVC: UIViewController {
         ]
         loadPointAnotation(allItem: allItem)
      
-        
-//        let tapGestureRecognizer = UITapGestureRecognizer(target: mapView,
-//                                                          action: #selector(handleTapGestureRecognizer))
-//        mapView.addGestureRecognizer(tapGestureRecognizer)
-//
-        
     }
     
    func loadMapBox(){
@@ -59,9 +52,6 @@ class MapVC: UIViewController {
        
     }
     
-//    @objc func handleTapGestureRecognizer() {
-//    mapView.mapboxMap.setCamera(to: CameraOptions(center: self.getCenter())
-//    }
     func loadStyle() {
         mapView.mapboxMap.loadStyleURI(.streets) { result in
             switch result {
@@ -75,7 +65,6 @@ class MapVC: UIViewController {
         }
     }
     
- 
     
    func loadCamara(){
        let centerCoordinate = CLLocationCoordinate2D(latitude: 21.3069,
@@ -148,13 +137,28 @@ class MapVC: UIViewController {
             
         }
     }
+
+    @available(iOS 16.0, *)
+    func bottomSheet() {
+        
+        if let sheet = moodSelectionVC.sheetPresentationController{
+            sheet.detents = [.custom(resolver: { context in
+                return CGFloat(100.00)
+            }), .medium(), .large()]
+            sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+            sheet.prefersGrabberVisible = true
+            sheet.preferredCornerRadius = 25
+        }
+        self.present(moodSelectionVC, animated: true, completion: nil)
+    }
+    
 }
 
 extension MapVC: AnnotationInteractionDelegate {
     public func annotationManager(_ manager: AnnotationManager,
                                   didDetectTappedAnnotations annotations: [Annotation]) {
-       
-      //  mapView.mapboxMap.setCamera(to: CameraOptions(center:annotations.c)
+        
+      print(annotations)
     }
     
 }
